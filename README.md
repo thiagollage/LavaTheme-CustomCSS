@@ -15,16 +15,17 @@ This document provides a detailed overview of the custom CSS used in the "Lava 2
 - [Credits](#credits)
 
 ## Social Links Buttons
-
+```css
 .site-footer-socials .fo-social-link {
   font-size: 20px; /* Adjust size as needed */
   width: 40px; /* Adjust width as needed */
   height: 40px; /* Adjust height as needed */
   line-height: 40px; /* Vertically center the icon */
 }
+```
 
 ## Album Grid
-
+```css
 .album-grid.square .album-item {
   border-radius: 10px; /* Adjust value as needed */
   overflow: hidden; /* Ensures content within the item also has rounded borders */
@@ -35,9 +36,10 @@ This document provides a detailed overview of the custom CSS used in the "Lava 2
 .album-grid.square .album-image {
   border-radius: 10px; /* Applies rounded borders to images within album items */
 }
+```
 
 ## Project Navigation
-
+```css
 .project-nav-link.project-nav-next.square {
   display: none !important; /* Uses !important to ensure the rule is applied */
 }
@@ -49,9 +51,10 @@ This document provides a detailed overview of the custom CSS used in the "Lava 2
 .project-title.title-font.container-sm.text-center + .project-images .project-assets-item-inner {
   margin-bottom: 10px; /* Adjust value as needed */
 }
+```
 
 ## Navigation Arrows
-
+```css
 .project-page-prev, .project-page-next {
   position: fixed;
   top: 50vh;
@@ -70,9 +73,10 @@ This document provides a detailed overview of the custom CSS used in the "Lava 2
 .project-page-next {
   right: 1rem; /* Adjust position as needed */
 }
+```
 
 ## Site Header Button
-
+```css
 .site-header-btn {
   position: absolute;
   top: 1.2857142857rem;
@@ -85,9 +89,10 @@ This document provides a detailed overview of the custom CSS used in the "Lava 2
   display: none;
   background: transparent;
 }
+```
 
 ## Site Header Button
-
+```css
 .site-header-btn {
   position: absolute;
   top: 1.2857142857rem;
@@ -100,9 +105,10 @@ This document provides a detailed overview of the custom CSS used in the "Lava 2
   display: none;
   background: transparent;
 }
+```
 
 ## Logo Style
-
+```css
 .site-logo img {
   max-width: 100%;
 }
@@ -115,9 +121,10 @@ img {
 *, *:before, *:after {
   box-sizing: border-box;
 }
+```
 
 ## General Styles
-
+```css
 body {
   font-weight: 300;
   letter-spacing: 0px;
@@ -138,9 +145,10 @@ body {
   grid-column-gap: 1rem; /* Reduces column spacing */
   grid-row-gap: 1rem; /* Reduces row spacing */
 }
+```
 
 ## Mobile Adjustments
-
+```css
 @media (max-width: 768px) {
   .site-header-btn {
       display: block; /* Makes the button visible on mobile devices */
@@ -209,6 +217,7 @@ body {
       font-size: 1rem;
   }
 }
+```
 
 ## Credits
 
