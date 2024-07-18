@@ -10,6 +10,7 @@ This document provides a detailed overview of the custom CSS used in the "Lava 2
 - [Site Header Button](#site-header-button)
 - [Logo Styles](#logo-styles)
 - [General Styles](#general-styles)
+- [Tablet Adjustments](#tablet-adjustments)
 - [Mobile Adjustments](#mobile-adjustments)
 - [Image and Video Styles](#image-and-video-styles)
 - [Credits](#credits)
