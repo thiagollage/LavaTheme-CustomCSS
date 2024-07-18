@@ -221,7 +221,7 @@ body {
 
 ## Credits
 
-This custom CSS was created by [@thiagollage](https://thiagollage.art). Feel free to connect with me on my social media platforms:
+This custom CSS was created by [Thiago Lage](https://thiagollage.art). Feel free to connect with me on my social media platforms:
 
 - **Twitter:** [@thiagollage](https://twitter.com/thiagollage)
 - **Instagram:** [@thiagollage](https://www.instagram.com/thiagollage)
