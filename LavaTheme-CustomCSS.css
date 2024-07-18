@@ -159,6 +159,81 @@ img {
   }
 }
 
+/* Adjustments for tablet devices */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .site-header-btn {
+      display: block; /* Makes the button visible on tablet devices */
+      position: relative;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+      font-size: 1rem;
+  }
+
+  .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .site-logo {
+      flex-grow: 1;
+  }
+
+  .site-header-btn {
+      position: relative;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+      font-size: 1rem;
+  }
+
+  /* Hamburger Menu lines */
+  .site-header-btn .line {
+      width: 1.6428571429rem;
+      height: 0.2142857143rem;
+      background: var(--accent-color);
+      position: relative;
+      transition: opacity .2s linear, transform .2s linear, left .2s linear;
+  }
+
+  /* Adjust the position of the X icon to match the Hamburger Menu */
+  .site-header-btn .icon-close {
+      width: 1.6428571429rem; /* Same width as .line */
+      height: 1.6428571429rem; /* Same height as .line */
+      background: var(--accent-color);
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      outline: 0;
+      display: none;
+      background: transparent;
+  }
+
+  /* Ensure the X icon is visible when the menu is open */
+  .menu-open .site-header-btn .icon-close {
+      display: block;
+  }
+
+  /* Hide the Hamburger Menu icon when the menu is open */
+  .menu-open .site-header-btn .icon-menu {
+      display: none;
+  }
+
+  /* Ensure the header button is fixed when the menu is active */
+  .header-nav-active .site-header-btn {
+      position: fixed;
+      z-index: 11;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+      font-size: 1rem;
+  }
+}
+
 /* Hides the .project-nav-link */
 .project-nav-link {
   display: none !important; /* Uses !important to ensure the rule is applied */
