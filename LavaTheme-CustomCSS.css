@@ -1,0 +1,303 @@
+/* Custom Theme Lava 2.0 */
+
+/* Decrease the size of Social Links buttons on the Home*/
+.site-footer-socials .fo-social-link {
+  font-size: 20px; /* Adjust size as needed */
+  width: 40px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  line-height: 40px; /* Vertically center the icon */
+}
+
+/* Creates rounded borders for the album-grid square class */
+.album-grid.square .album-item {
+  border-radius: 10px; /* Adjust value as needed */
+  overflow: hidden; /* Ensures content within the item also has rounded borders */
+  background-color: #0a0a0a; /* Default background color */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.album-grid.square .album-image {
+  border-radius: 10px; /* Applies rounded borders to images within album items */
+}
+
+/* Hides all elements with the class project-nav-link project-nav-next square */
+.project-nav-link.project-nav-next.square {
+  display: none !important; /* Uses !important to ensure the rule is applied */
+}
+
+/* Adjusts the spacing between images within the project-title title-font container-sm text-center class */
+.project-title.title-font.container-sm.text-center + .project-images .project-assets-item {
+  margin-bottom: 10px; /* Adjust value as needed */
+}
+
+.project-title.title-font.container-sm.text-center + .project-images .project-assets-item-inner {
+  margin-bottom: 10px; /* Adjust value as needed */
+}
+
+/* Adjustments for navigation arrows */
+.project-page-prev, .project-page-next {
+  position: fixed;
+  top: 50vh;
+  text-align: center;
+  z-index: 2;
+  color: inherit;
+  width: 5rem;
+  font-size: 2.5rem;
+  transform: translate(0, -50%);
+}
+
+/* Additional style for the previous arrow */
+.project-page-prev {
+  left: 1rem; /* Adjust position as needed */
+}
+
+/* Additional style for the next arrow */
+.project-page-next {
+  right: 1rem; /* Adjust position as needed */
+}
+
+/* Styles for the site-header-btn */
+.site-header-btn {
+  position: absolute;
+  top: 1.2857142857rem;
+  right: 0.3571428571rem;
+  padding: 0.7142857143rem;
+  line-height: 0.9285714286rem;
+  font-size: 0.0714285714rem;
+  cursor: pointer;
+  outline: 0;
+  display: none;
+  background: transparent;
+}
+
+/* Styles for the logo */
+.site-logo img {
+  max-width: 100%;
+}
+
+img {
+  vertical-align: top;
+  border-style: none;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Specific adjustments for mobile devices */
+@media (max-width: 768px) {
+  .site-header-btn {
+      display: block; /* Makes the button visible on mobile devices */
+      position: relative;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+      font-size: 1rem;
+  }
+
+  .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .site-logo {
+      flex-grow: 1;
+  }
+
+  .site-header-btn {
+      position: relative;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+      font-size: 1rem;
+  }
+
+  /* Hamburger Menu lines */
+  .site-header-btn .line {
+      width: 1.6428571429rem;
+      height: 0.2142857143rem;
+      background: var(--accent-color);
+      position: relative;
+      transition: opacity .2s linear, transform .2s linear, left .2s linear;
+  }
+
+  /* Adjust the position of the X icon to match the Hamburger Menu */
+  .site-header-btn .icon-close {
+      width: 1.6428571429rem; /* Same width as .line */
+      height: 1.6428571429rem; /* Same height as .line */
+      background: var(--accent-color);
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      outline: 0;
+      display: none;
+      background: transparent;
+  }
+
+  /* Ensure the X icon is visible when the menu is open */
+  .menu-open .site-header-btn .icon-close {
+      display: block;
+  }
+
+  /* Hide the Hamburger Menu icon when the menu is open */
+  .menu-open .site-header-btn .icon-menu {
+      display: none;
+  }
+
+  /* Ensure the header button is fixed when the menu is active */
+  .header-nav-active .site-header-btn {
+      position: fixed;
+      z-index: 11;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+      font-size: 1rem;
+  }
+}
+
+/* Hides the .project-nav-link */
+.project-nav-link {
+  display: none !important; /* Uses !important to ensure the rule is applied */
+}
+
+body {
+  font-weight: 300;
+  letter-spacing: 0px;
+  line-height: 1.75;
+  color: var(--body-color);
+  background-color: var(--body-bg);
+  min-height: 100vh;
+  display: flex;
+  flex: 1 1 100vw;
+  flex-flow: column nowrap;
+  max-width: 100%;
+  font-family: var(--font-family-primary);
+}
+
+/* Adjustments for the album grid */
+.album-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 1rem; /* Reduces column spacing */
+  grid-row-gap: 1rem; /* Reduces row spacing */
+}
+
+@media (max-width: 54.8571428571em) {
+  .album-grid {
+      grid-template-columns: 1fr 1fr; /* Displays two columns on small screens (mobile) */
+  }
+}
+
+@media (min-width: 54.8571428571em) {
+  .album-grid {
+      grid-template-columns: 1fr 1fr 1fr; /* Displays three columns on medium screens */
+  }
+}
+
+@media (min-width: 73.1428571429em) {
+  .album-grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Displays five columns on large screens */
+  }
+}
+
+/* Makes the image in the bg-overlayed-avatar class round and adds spacing */
+.bg-overlayed-avatar img {
+  border-radius: 50%; /* Makes the image round */
+  width: 240px; /* Ensures the image is square */
+  height: 240px; /* Ensures the image is square */
+  object-fit: cover; /* Ensures the image covers the entire container */
+}
+
+/* Centers the bg-overlayed-avatar class on small screens */
+@media (max-width: 54.7857142857em) {
+  .bg-overlayed-avatar {
+      text-align: center;
+  }
+}
+
+/* Adds spacing for hidden-desktop and hidden-tablet classes */
+.hidden-desktop, .hidden-tablet {
+  margin: 1.5px; /* Adds spacing around the elements */
+}
+
+/* Adds rounded corners to img-responsive and bg-overlayed-image classes */
+.img-responsive, .bg-overlayed-image {
+  border-radius: 12px; /* Adds 12px rounded corners */
+}
+
+/* Styles for bg-overlayed-image */
+.bg-overlayed-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  max-height: 42.8571428571rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/* Media query for bg-overlayed-image */
+@media (max-width: 54.7857142857em) {
+  .bg-overlayed-image {
+      min-height: 40vh;
+  }
+}
+
+/* Styles for img-responsive */
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* General styles for img elements */
+img {
+  vertical-align: top;
+  border-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img {
+  border-style: none;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* User agent stylesheet adjustments */
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+/* Adds rounded corners to video elements */
+.video-js .vjs-tech, video {
+  border-radius: 12px; /* Adds 12px rounded corners */
+}
+
+/* Fixed Close(X) Menu */
+@media (max-width: 768px) {
+  .header-nav-active .site-header-btn {
+      position: relative;
+      z-index: 11;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+      font-size: 1rem;
+  }
+}
+
+/* credits by @thiagollage */
