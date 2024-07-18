@@ -91,22 +91,6 @@ This document provides a detailed overview of the custom CSS used in the "Lava 2
 }
 ```
 
-## Site Header Button
-```css
-.site-header-btn {
-  position: absolute;
-  top: 1.2857142857rem;
-  right: 0.3571428571rem;
-  padding: 0.7142857143rem;
-  line-height: 0.9285714286rem;
-  font-size: 0.0714285714rem;
-  cursor: pointer;
-  outline: 0;
-  display: none;
-  background: transparent;
-}
-```
-
 ## Logo Style
 ```css
 .site-logo img {
