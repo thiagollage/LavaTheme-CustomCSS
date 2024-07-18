@@ -131,11 +131,11 @@ body {
 }
 ```
 
-## Mobile Adjustments
+## Tablet Adjustments
 ```css
-@media (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .site-header-btn {
-      display: block; /* Makes the button visible on mobile devices */
+      display: block; /* Torna o botão visível em dispositivos tablet */
       position: relative;
       top: 0;
       right: 0;
@@ -170,8 +170,80 @@ body {
   }
 
   .site-header-btn .icon-close {
-      width: 1.6428571429rem; /* Same width as .line */
-      height: 1.6428571429rem; /* Same height as .line */
+      width: 1.6428571429rem; /* Mesma largura que .line */
+      height: 1.6428571429rem; /* Mesma altura que .line */
+      background: var(--accent-color);
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      outline: 0;
+      display: none;
+      background: transparent;
+  }
+
+  .menu-open .site-header-btn .icon-close {
+      display: block;
+  }
+
+  .menu-open .site-header-btn .icon-menu {
+      display: none;
+  }
+
+  .header-nav-active .site-header-btn {
+      position: fixed;
+      z-index: 11;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+      font-size: 1rem;
+  }
+}
+```
+
+## Mobilet Adjustments
+```css
+@media (max-width: 768px) {
+  .site-header-btn {
+      display: block; /* Torna o botão visível em dispositivos móveis */
+      position: relative;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+      font-size: 1rem;
+  }
+
+  .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .site-logo {
+      flex-grow: 1;
+  }
+
+  .site-header-btn {
+      position: relative;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+      font-size: 1rem;
+  }
+
+  .site-header-btn .line {
+      width: 1.6428571429rem;
+      height: 0.2142857143rem;
+      background: var(--accent-color);
+      position: relative;
+      transition: opacity .2s linear, transform .2s linear, left .2s linear;
+  }
+
+  .site-header-btn .icon-close {
+      width: 1.6428571429rem; /* Mesma largura que .line */
+      height: 1.6428571429rem; /* Mesma altura que .line */
       background: var(--accent-color);
       position: absolute;
       top: 0;
